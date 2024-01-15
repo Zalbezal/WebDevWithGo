@@ -8,7 +8,7 @@ import (
 )
 
 func Parse(filepath string) (Template, error) {
-	
+
 	tpl, err := template.ParseFiles(filepath)
 	if err != nil {
 		return Template{}, fmt.Errorf("parsing template: %w", err)
