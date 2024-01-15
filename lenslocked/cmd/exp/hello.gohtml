@@ -6,11 +6,14 @@ const user = {
     "name": {{.Name}},
     "bio": {{.Bio}}
     "age": {{.Age}}
+    "visitDates": {{.VisitDates}}
+    "metaData": {{.Meta.Data}}
+    
 };
 console.log(user);
 </script>
 
-
+{{if (gt .Age 12) }} <h1>{{.Age}}</h1> {{end}}
 
 
 
