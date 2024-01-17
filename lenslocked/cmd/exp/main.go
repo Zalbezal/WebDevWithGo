@@ -1,8 +1,7 @@
 package main
 
 import (
-	"html/template"
-	"os"
+	"fmt"
 )
 
 type User struct {
@@ -16,25 +15,31 @@ type UserMeta struct {
 	Data map[int]string
 }
 
+func blah() {
+	panic("...")
+}
+
 func main() {
-	t, err := template.ParseFiles("hello.gohtml")
-	if err != nil {
-		panic(err)
-	}
+	// t, err := template.ParseFiles("hello.gohtml")
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	user := User{
-		Name:       "Jeppe Korbo",
-		Bio:        `<script>alert("Haha, you have been h4x0r3d!");</script>`,
-		Age:        123,
-		VisitDates: []int{1, 2, 3},
-		Meta: UserMeta{
-			Data: map[int]string{1: "hello", 2:"there"},
-		},
-	}
+	// user := User{
+	// 	Name:       "Jeppe Korbo",
+	// 	Bio:        `<script>alert("Haha, you have been h4x0r3d!");</script>`,
+	// 	Age:        123,
+	// 	VisitDates: []int{1, 2, 3},
+	// 	Meta: UserMeta{
+	// 		Data: map[int]string{1: "hello", 2:"there"},
+	// 	},
+	// }
 
-	err = t.Execute(os.Stdout, user)
-	if err != nil {
-		panic(err)
-	}
+	// err = t.Execute(os.Stdout, user)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
+	numbers := []int{1, 2, 3}
+	fmt.Println(numbers[4])
 }
