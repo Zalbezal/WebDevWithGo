@@ -29,7 +29,7 @@ func main() {
 		"signup.gohtml", "tailwind.gohtml",
 	))
 	r.Get("/signup", usersC.New)
-
+	r.Post("/users", usersC.Create)
 	r.Get("/static", controllers.StaticHandler(views.Must(views.Parse(filepath.Join("templates", "static.gohtml")))))
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
@@ -38,5 +38,4 @@ func main() {
 	fmt.Println("Starting the server on :3000...")
 
 	http.ListenAndServe(":3000", r)
-
 }
