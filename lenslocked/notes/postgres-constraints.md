@@ -1,4 +1,4 @@
-Postgres Constraints
+# Postgres Constraints
 
 Example SQL:
 
@@ -11,7 +11,7 @@ CREATE TABLE users (
     email TEXT UNIQUE NOT NULL
 );
 ```
- 
+
 Constraints are rules that we can apply to columns in our table. For example, we might want to ensure that every user in our database has a unique id, so we could use the UNIQUE constraint. We could also verify that an integer column is above or below a specific value.
 
 Like data types, there are many constraints available in Postgres. For now we will only be using a few:
